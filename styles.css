@@ -24,7 +24,7 @@ body {
 
 .bar-blue {
   background-color: #3b9cf7;
-  height: 25px;
+  padding: 4px 10px 4px 8px;
 }
 
 .brand {
@@ -41,15 +41,19 @@ body {
 }
 
 .social-icons {
-  position: fixed;
-  right: 5%;
-  top: 0;
+  float: right;
 }
 
 .social-icons > i {
   color: white;
   font-size: 24px;
   margin-left: 10px;
+}
+
+.clear-fix::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 nav {
@@ -123,11 +127,11 @@ nav a::before {
   font-family: 'Oswald', sans-serif;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 600px;
 }
 
 section {
   margin-left: 100px;
+  margin-right: 100px;
 }
 
 .blog-post {
@@ -141,6 +145,7 @@ section {
 
 .blog-post > p:first-of-type {
   font-style: italic;
+  line-height: 1.5;
 }
 
 .blog-post > p:nth-child(3) {
@@ -154,32 +159,46 @@ section {
 
 .blog-post > p:nth-child(5) {
   margin-top: 20px;
+  line-height: 1.5;
 }
 
 aside {
   width: 50%;
   min-height: 100%;
-  border-left: 2px solid #2c2b2b;
+  border-left: 2px solid #0e8a56;
 }
 
 input[type='text'] {
   background: url(http://iteldomingo.com/wp-content/uploads/2018/02/search.png)
     no-repeat 10px 6px #fcfcfc;
   border: 1px solid #d1d1d1;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
   font: bold 12px Arial, Helvetica, Sans-serif;
   color: #bebebe;
   width: 150px;
   padding: 6px 15px 6px 35px;
-  margin: 20 0 10 0;
-  border-radius: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+  margin-bottom: 20px;
 }
 
 .archive {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
+}
+
+.archive > ul > li {
+  margin: 8px 0;
+}
+
+.archive > ul > li > a {
+  text-decoration: none;
+  color: #008cba;
+}
+
+.archive > ul > li > a:hover {
+  color: darkblue;
 }
 
 hr.side {
@@ -190,6 +209,6 @@ hr.side {
 
 footer {
   color: #fff;
-  background: #0068c9;
+  background: #3b9cf7;
   text-align: center;
 }
